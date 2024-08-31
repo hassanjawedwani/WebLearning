@@ -13,10 +13,21 @@
     <title>Bootstrap</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="container">
-        
-      </div>
-    </div>
+    <!-- 
+    * container-fluid class takes width up to 100% 
+    -->
+    <div class="container-fluid" style="background-color: black;">container-fluid</div>
+    <!--
+    * container class takes width according to screen sizes
+    * 0px ... <576px (takes 100% width)
+    * >=576px ... <768px (takes 540px)
+    * >=768px ... <992px (720px)
+    * >=992px ... <1200px (960px)
+    * >=1200px ... <1400px (1140px) 
+    * >= 1400px ... full (1320px)
+    -->
+    <div class="container" style="background-color: silver;">container</div>
+    
+
   </body>
 </html>
