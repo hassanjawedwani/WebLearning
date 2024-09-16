@@ -1,13 +1,20 @@
-import { useEffect } from "react";
+import React from "react";
 
-const Child = (props) => {
-  useEffect(() => {
-    console.log("useEffect called on count prop change");
-  }, [props.count])
+const Child = ({ student }) => {
   return (
-    <div>
-      
-    </div>
+    <React.Fragment>
+      <p>{student.rollno}</p>
+      <p>{student.name}</p>
+      <p>{student.email}</p>
+      <p>
+        {student.address[0].type} - {student.address[0].address} -{" "}
+        {student.address[0].country}
+      </p>
+      <p>
+        {student.address[1].type} - {student.address[1].address} -{" "}
+        {student.address[1].country}
+      </p>
+    </React.Fragment>
   );
 };
 
