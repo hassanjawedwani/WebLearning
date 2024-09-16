@@ -1,20 +1,8 @@
-import React from "react";
-
-const Child = ({ student }) => {
+const Child = ({showAlert}) => {
   return (
-    <React.Fragment>
-      <p>{student.rollno}</p>
-      <p>{student.name}</p>
-      <p>{student.email}</p>
-      <p>
-        {student.address[0].type} - {student.address[0].address} -{" "}
-        {student.address[0].country}
-      </p>
-      <p>
-        {student.address[1].type} - {student.address[1].address} -{" "}
-        {student.address[1].country}
-      </p>
-    </React.Fragment>
+    <div>
+      <button onClick={() => showAlert("Child Component")}>Click Me</button>
+    </div>
   );
 };
 
