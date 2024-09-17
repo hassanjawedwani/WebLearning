@@ -1,27 +1,25 @@
-import { useMemo } from "react";
+import React, { useEffect } from "react";
+import { useRef } from "react";
+import Child from "./Child";
 
-const { useState } = require("react");
+const Student = () => {
+  const myInputRef = useRef(null);
 
-function Student() {
-  const [counter1, setCounter1] = useState(0);
-  const [counter2, setCounter2] = useState(0);
-  const multiplierMemo = useMemo(function multiplier() {
-    console.log("multiplier called");
-    return counter1 * 10;
-  }, [counter1]);
+  useEffect(() => {
+    console.log("use effect called")
+    myInputRef.current.style = "background-color: red";
+  }, []);
+
   return (
     <div>
-      <h1>Counter1: {counter1}</h1>
-      <button type="button" onClick={() => setCounter1(counter1 + 1)}>
-        Increment Counter 1
-      </button>
-      <h1>Counter2: {counter2}</h1>
-      <button type="button" onClick={() => setCounter2(counter2 + 1)}>
-        Increment Counter 2
-      </button>
-      <h1>Multiplier: {multiplierMemo}</h1>
+      {console.log("student render")}
+      {/* <h1>hello</h1> */}
+      {/* <input type="text" placeholder="Enter Text" ref={myInputRef} /> */}
+      {/* <button type="button" onClick={updateInput}>Update Input</button> */}
+      <Child ref={myInputRef}/>
+
     </div>
   );
-}
+};
 
 export default Student;

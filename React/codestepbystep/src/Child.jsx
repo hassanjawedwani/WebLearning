@@ -1,9 +1,12 @@
-const Child = ({showAlert}) => {
+import { forwardRef } from "react"
+function Child(props, ref) {
+  {console.log("Child render")}
+
   return (
     <div>
-      <button onClick={() => showAlert("Child Component")}>Click Me</button>
+      <input type="text" placeholder="Child Input" ref={ref} />
     </div>
-  );
-};
+  )
+}
 
-export default Child;
+export default forwardRef(Child); //Child;
