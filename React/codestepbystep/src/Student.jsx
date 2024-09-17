@@ -1,25 +1,50 @@
-import React, { useEffect } from "react";
-import { useRef } from "react";
-import Child from "./Child";
+import { useState } from "react";
 
-const Student = () => {
-  const myInputRef = useRef(null);
-
-  useEffect(() => {
-    console.log("use effect called")
-    myInputRef.current.style = "background-color: red";
-  }, []);
-
+function Student() {
   return (
     <div>
-      {console.log("student render")}
-      {/* <h1>hello</h1> */}
-      {/* <input type="text" placeholder="Enter Text" ref={myInputRef} /> */}
-      {/* <button type="button" onClick={updateInput}>Update Input</button> */}
-      <Child ref={myInputRef}/>
-
+      <h2>Red Counter</h2>
+      <RedCounter cmp={<Counter />} />
+      <h2>Green Counter</h2>
+      <GreenCounter cmp={<Counter />}/>
+      <h2>Blue Counter</h2>
+      <BlueCounter  cmp={<Counter />}/>
     </div>
-  );
-};
+  )
+}
+
+
+function RedCounter(props) {
+  return <div style={{ backgroundColor: "red" }}>{props.cmp}</div>
+}
+
+function GreenCounter(props) {
+  return <div style={{backgroundColor: "green"}}>{props.cmp}</div>
+}
+
+function BlueCounter(props) {
+  return <div style={{backgroundColor: "blue"}}>{props.cmp}</div>
+}
+
+function Counter() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div>
+      <h1>{counter}</h1>
+      <button type="button" onClick={() => setCounter(counter + 1)}>Increment</button>
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
 
 export default Student;
