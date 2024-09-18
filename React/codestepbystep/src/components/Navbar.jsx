@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/jobs">Jobs</Link></li>
+    <ul className={styles.navbar}>
+      <li><NavLink to="/" className={styles.navbarLink} style={({isActive}) => { return {color: isActive && "red"}}} >Home</NavLink></li>
+      <li><NavLink to="/about" className={styles.navbarLink} style={({isActive}) => { return {color: isActive && "red"}}} >About</NavLink></li>
+      <li><NavLink to="/jobs" className={styles.navbarLink} style={({isActive}) => { return {color: isActive && "red"}}} >Jobs</NavLink></li>
     </ul>
   )
 }
