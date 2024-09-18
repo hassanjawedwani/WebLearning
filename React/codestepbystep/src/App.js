@@ -3,6 +3,8 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Page404 from "./components/Page404";
+import Jobs from "./components/Jobs";
+import JobsDescription from "./components/JobsDescription";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/*" element={<Page404 />} />
-        {/* <Route path="/*" element={<Navigate to="/" />} /> */}
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs/:id" element={<JobsDescription />} />
       </Routes>
     </BrowserRouter>
   );
