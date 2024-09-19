@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 function Filter() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [age, setAge] = useState('');
   const [marks, setMarks] = useState('');
+
   useEffect(() => {
     setSearchParams({ age, marks });
   }, [age, marks]);
+
   return (
     <div>
       <h1>Data Fetched from Search Params or ?query params</h1>
