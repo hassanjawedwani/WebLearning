@@ -14,28 +14,36 @@ function App() {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => setUsers(data));
-  }, [users]);
+  }, []);
   
   function handleSubmit(e) {
     e.preventDefault();
     console.log(email, password);
     const newUser = { email: email, password: password };
-    try {
-      fetch('http://localhost:3000/users', {
-        method: 'Post',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newUser)
-      }).then(result => {
-        console.log(result);
-      })
-    } catch (error) {
-      throw Error(`Some error occurred in post operation ${error.name} ${error.message}`);
-    }
+    
+    fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newUser)
+    }).then(result => {
+      if (!result.ok) {
+          throw Error(`Some error occurred in post operation ${error.name} ${error.message}`);   
+      }
+      return result.json();
+    }).then(newUser => {
+      setUsers([...users, newUser]);
+    })   
+      .catch((err) => {
+      throw Error(`Some error occurred in post operation ${err.name} ${err.message}`);
+    });
+    
+    
     setEmail('');
     setPassword('');
+
   }
 
   function deleteUser(id) {
@@ -49,7 +57,7 @@ function App() {
         throw Error("unable to delete a user")
       }
     }).catch((err) => {
-      console.log(err);
+      console.error(err);
     });
   }
 
@@ -58,10 +66,10 @@ function App() {
       <h1>App Post Request</h1> 
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} required />
+        <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} value={email} required />
         <br /><br />
         <label htmlFor="password">Password</label>
-        <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} required />
+        <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)} value={password} required />
         <br /><br />
         <button type="submit">Submit</button>
       </form>
@@ -82,7 +90,6 @@ function App() {
 }
 
 export default App;
-
 
 
 
