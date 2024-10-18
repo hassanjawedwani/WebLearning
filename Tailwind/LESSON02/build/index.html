@@ -6,24 +6,42 @@
     <title>Acme Rockets</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" defer></script>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
 
     <header class="bg-teal-700 text-white sticky top-0 z-10">
-      <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+      <section class="widescreen:section-min-height tallscreen:section-min-height max-w-4xl mx-auto p-4 flex justify-between items-center">
        <h1 class="text-3xl font-medium"> <a href="#hero">🚀 Acme Rockets</a></h1>
-       <button class="text-3xl sm:hidden focus:outline-none" id="mobile-open-button">&#9776;</button>
+       <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer relative w-8 h-8" id="mobile-open-button">
+        <!-- &#9776; -->
+         <!-- <div class=" bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute  before:-translate-x-4 before:-translate-y-3  after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute  after:-translate-x-4 after:-translate-y-3"> </div> -->
+         <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute  before:-translate-x-4 before:-translate-y-3  after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute  after:-translate-x-4 after:translate-y-3"> </div>
+
+      </button>
        <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
         <a href="#rockets">Rockets</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">contact</a>
        </nav>
       </section>
+      <section id="mobile-menu" class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top  hidden animate-open-menu">
+        <!-- <button class="text-8xl self-end px-6">
+          &times;
+        </button> -->
+        <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
+          <a href="#rockets" class="w-full py-6 text-center hover:opacity-90">Rockets</a>
+          <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact</a>
+          <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a>
+        </nav>
+      </section>
     </header>
 
     <main class="max-w-4xl mx-auto">
 
-      <section id="hero" class="my-8 sm:my-24 scroll-mt-40 flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+      <section id="hero" class=" widescreen:section-min-height tallscreen:section-min-height my-8 sm:my-24 scroll-mt-40 flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
         <article class="sm:w-1/2">
           <h2 class="text-center max-w-md text-4xl font-bold sm:text-left sm:text-5xl text-slate-900 dark:text-white ">We Boldy Go <span class="text-indigo-700 dark:text-indigo-300">Where No Rocket</span> Has Gone Before ...</h2>
           <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">We're building rockets for the next century today. From the Moon to Marks, Jupitor and beyond...</p>
@@ -34,7 +52,7 @@
 
       <hr class="bg-black sm:bg-white w-1/2 mx-auto" />
 
-      <section id="rockets" class="p-6 my-12 scroll-mt-20">
+      <section id="rockets" class=" widescreen:section-min-height tallscreen:section-min-height p-6 my-12 scroll-mt-20">
         <h2 class="text-center text-4xl sm:text-5xl font-bold mb-8">Out Rockets</h2>
         <ul class="flex flex-col content-center items-center list-none sm:flex-row gap-8">
           <li class="bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl w-2/3 sm:w-5/6 border border-solid border-slate-900 dark:border-gray-100 flex flex-col justify-center items-center">
@@ -86,7 +104,7 @@
         <figure class="my-12">
           <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
             <p class="text-2xl sm:text-3xl text text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-16 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2 ">a
-              I knew I not only wanted &#8212; <span class="italic">I needed </span> &#8212 acme's Infinity Rocket for my mission to space. Acme Delived in one Day! nothing says <q class="italic">Take me to your leander</q> like Acme Infinity Rocket! 💯
+              I knew I not only wanted &#8212; <span class="italic">I needed </span> &#8212; acme's Infinity Rocket for my mission to space. Acme Delived in one Day! nothing says <q class="italic">Take me to your leander</q> like Acme Infinity Rocket! 💯
             </p>
           </blockquote>
           <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
@@ -97,7 +115,7 @@
 
       <hr class="bg-black sm:bg-white w-1/2 mx-auto" />
 
-      <section id="contact" class="p-6 my-12  scroll-m-20 ">
+      <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height p-6 my-12  scroll-m-20 ">
         <h2 class="text-center text-4xl sm:text-5xl font-bold ">Contact Us</h2>
         <form action="" class="max-w-xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4">
           <label for="subject">Subject:</label>
@@ -109,6 +127,8 @@
       </section>
 
     </main> 
+
+    
     <footer id="footer" class="w-full bg-teal-700 text-white text-xl">
       <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
         <address>
