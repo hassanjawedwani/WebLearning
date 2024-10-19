@@ -21,8 +21,28 @@
     * Syntax: property: color_name;  where color_name can be any color name
     * E.g. background-color: blue;
   -->
-  <div style="width: 500px; height:500px; background-color: blue" ></div>
+  <!-- <div style="width: 500px; height:500px; background-color: blue" ></div> -->
   
+
+  <!-- 
+    ? rgb or rgba
+    * rgb colors represents red, green and blue light sources & a is for Alpha Channel (opacity)
+    * syntax: rgb(red, green, blue)  e.g. background-color: rgb(0, 0, 0);
+    * red, green and blue defines intensity of color which may be between 0-255
+    * 0 means full black and 255 means full white, we can make other colors by combining them
+    * which mean 256 * 256 * 256 = 16,777,216 or 16 Millions+ colors are possible.
+    * Open the browser and make different combinations to create different colors
+  -->
+  <h2>Colors Combinator</h2>
+  <div id="color-controls">
+    <div class="control">
+      <input type="range" min="0" max="255" 
+    </div>
+    <div class="control"></div>
+    <div class="control"></div>
+  </div>
+
+
 
 
   
