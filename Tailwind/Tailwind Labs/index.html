@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Labs</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#da373d',
+              dark: '#122332',
+              light: '#11373d'
+            }
+          },
+          fontFamily: {
+            headline: "Poppins, sans-serif"
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-4xl font-bold underline bg-brand font-headline tracking-tight">
+    Hello world!
+  </h1>
+  <h1 class="text-9xl font-bold underline bg-brand-dark">
+    Hello world!
+  </h1>
+  <h1 class="text-9xl font-bold underline bg-brand-light">
+    Hello world!
+  </h1>
+</body>
+</html>
