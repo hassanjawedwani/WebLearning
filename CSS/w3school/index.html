@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Styling Images</title>
+  <style>
+    .mask {
+      /* -webkit-mask-image: url(assets/rb_2148203400.png);
+      mask-image: url(assets/rb_2148203400.png);
+      mask-repeat: no-repeat; */
+      -webkit-mask-image: url(assets/rb_2148203400.png);
+  mask-image: url(assets/rb_2148203400.png);
+  mask-repeat: no-repeat;    
+  mask-position: center;
+    }
+  </style>
 </head>
 <body>
   <!-- <figure>
@@ -54,12 +65,38 @@
       style="width: 300px; height: 700px; object-fit: none"
     />
     <hr> -->
-    <div style="height:400px">
+    <!-- <div style="height:400px">
     <img 
       src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
       alt="father and daughter at bridge"
       style="width: 50%; height: 100%; object-fit: contain;"
     />
+    </div> -->
+
+    <!-- <img 
+      src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
+      alt="father and daughter at bridge"
+      style="width:300px; height:800px;"
+    /> -->
+    <!-- <img 
+      src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
+      alt="father and daughter at bridge"
+      style="width:300px; height:300px; object-fit:cover"
+    />
+    <img 
+      src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
+      alt="father and daughter at bridge"
+      style="width:300px; height:300px; object-fit:cover; object-position: 90% 80%"
+    /> -->
+    <!-- <img 
+      src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
+      alt="father and daughter at bridge"
+      style="width:300px; height:800px; object-fit:cover"
+    /> -->
+
+    <div class="mask">
+     <img src="https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg" alt="https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg">
     </div>
+
 </body>
 </html>
