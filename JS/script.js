@@ -4,13 +4,23 @@ const ag5883 = {
   name: "hassan jawed",
   ag: "2021-ag-5883",
   semester: 7,
-  married: false
+  married: false,
+  get details() {
+    return this.name.toUpperCase() + " " + this.ag;
+  },
+  getDetails: function() {
+    return this.name + " " + this.ag;
+  },
+  set setSemester(currSemester) {
+    this.semester = currSemester;
+  }
 };
 
 const ag5992 = {
   name: "ahmad",
   age: 23,
   semester: 9
+
 };
 
 // const text = Object.entries(ag5883);
@@ -50,7 +60,74 @@ const ag5992 = {
 //   console.log(variable, ag5883[variable]);
 // }
 
-Object.defineProperty(ag5883, "sex", { value:"male"}); 
-Object.defineProperty(ag5883, "semester", { value: 8 });
+// Object.defineProperty(ag5883, "sex", { value:"male"});
+// Object.defineProperty(ag5883, "semester", { value: 8 });
 
-console.log(ag5883)
+// console.log(ag5883)
+
+// Object.defineProperty(ag5883, "sex", { value: "strongmale", writable: true, enumerable:true, configurable:false});
+// Object.defineProperty(ag5883, "sex", { value: "wealthymale" });
+// delete ag5883.sex;
+// console.log(ag5883)
+
+// Object.defineProperty(ag5883, 'age', { value: 23 }, { enumerable: false });
+// console.log(Object.getOwnPropertyNames(ag5883));
+// console.log(Object.keys(ag5883));
+
+// Object.defineProperty(ag5883, "getfulldetail", {
+//   get: function () { return this.name }
+// });
+
+// console.log(ag5883.getfulldetail);
+
+// console.log(ag5883.getDetails());
+// console.log(ag5883.details);
+
+// Object.defineProperty(ag5883, "add", {
+//   set: function (value) {
+//     this.semester += value;
+//   }
+// })
+
+// Object.defineProperty(ag5883, "saraKuch", {
+//   get: function () {
+//     return this.name;
+//   }
+// })
+
+// ag5883.add = 4;
+
+// console.log(ag5883.semester);
+// console.log(ag5883.saraKuch);
+
+// Object.preventExtensions(ag5992);
+// ag5992.nationality = "male";
+// console.log(Object.isExtensible(ag5992));
+
+// const fruits = ["apple"];
+// Object.preventExtensions(fruits);
+// fruits.push("banana");
+
+// const fruits = ["apple"];
+// console.log(Object.isExtensible(fruits));
+
+// console.log(ag5992);
+// Object.preventExtensions(ag5992);
+// Object.seal(ag5992)
+// delete ag5992.name;
+// console.log(ag5992);
+// console.log(Object.isExtensible(ag5992));
+// console.log(Object.isSealed(ag5992));
+
+// const fruits = ["apple"];
+// Object.seal(fruits);
+// delete fruits[0];
+// console.log(fruits);
+
+console.log(ag5992);
+ag5992.age = 58;
+console.log(ag5992);
+Object.freeze(ag5992);
+ag5992.age = 23;
+console.log(ag5992)
+console.log(Object.isFrozen(ag5992));
