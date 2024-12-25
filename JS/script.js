@@ -124,10 +124,57 @@ const ag5992 = {
 // delete fruits[0];
 // console.log(fruits);
 
-console.log(ag5992);
-ag5992.age = 58;
-console.log(ag5992);
-Object.freeze(ag5992);
-ag5992.age = 23;
-console.log(ag5992)
-console.log(Object.isFrozen(ag5992));
+// console.log(ag5992);
+// ag5992.age = 58;
+// console.log(ag5992);
+// Object.freeze(ag5992);
+// ag5992.age = 23;
+// console.log(ag5992)
+// console.log(Object.isFrozen(ag5992));
+
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   currentCar() {
+//     return "Currently i have " + this.name;
+//   }
+// }
+// class Model extends Car {
+//   constructor(name, model) {
+//     super(name);
+//     this.model = model;
+//   }
+//   currentModel() {
+//     return this.currentCar() + " and model is " + this.model;
+//   }
+// }
+
+// const myCar = new Model("Lamborgini", "gWagon");
+// console.log(myCar.currentModel());
+
+// hello = function () {
+//   return "hello world";
+// }
+
+// hello = (name) => {
+//   return "hello world" + ` ${name}`;
+// }
+
+// hello = () => "hello World";
+
+// console.log(hello());
+
+class Header {
+  constructor(color) {
+    this.color = color;
+  };
+  data = function() {
+  console.log(this);
+  }
+}
+const myHeader = new Header("blue");
+
+window.addEventListener("load", myHeader.data);
+const button = document.getElementById("btn");
+button.addEventListener("click", myHeader.data);
