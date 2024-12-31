@@ -1,0 +1,12 @@
+:root {
+  --backgroundColor: blue;
+}
+
+* {
+  background-color: var(--backgroundColor, red);
+}
+
+h1 {
+  --red: red;
+  background-color: var(--red);
+}
