@@ -1,12 +1,12 @@
 :root {
-  --backgroundColor: blue;
+  --backgroundColor: black;
 }
 
-* {
-  background-color: var(--backgroundColor, red);
+body {
+  background-color: var(--backgroundColor);
 }
 
-h1 {
-  --red: red;
-  background-color: var(--red);
+button {
+  --button-blue: red;
+  border: 4px solid var(--button-blue);
 }

@@ -5,19 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Styling Images</title>
   <style>
-    .mask {
+    /* .mask { */
       /* -webkit-mask-image: url(assets/rb_2148203400.png);
       mask-image: url(assets/rb_2148203400.png);
       mask-repeat: no-repeat; */
-      -webkit-mask-image: url(assets/rb_2148203400.png);
-  mask-image: url(assets/rb_2148203400.png);
-  mask-repeat: no-repeat;    
-  mask-position: center;
-    }
+      /* -webkit-mask-image: url(assets/rb_2148203400.png);
+      mask-image: url(assets/rb_2148203400.png);
+      mask-repeat: no-repeat;    
+      mask-position: center; */
+    /* } */
   </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button>click me</button>
+  <!-- <script>
+    const root = document.querySelector(':root');
+    const val = getComputedStyle(root);
+    root.style.setProperty('--backgroundColor', 'red');
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', () => {
+      alert(val.getPropertyValue("--backgroundColor"));
+    })
+  </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- <figure>
     <img 
       src="https://images.pexels.com/photos/28926779/pexels-photo-28926779/free-photo-of-romantic-couple-embracing-in-cityscape.jpeg"
@@ -109,12 +138,12 @@
   </p> -->
 
   <!-- <textarea name="comments" id="queries" style="resize: both;">adf</textarea> -->
-   <p style="border: 1px solid black; outline: 5px solid red; outline-offset: 10px;">hello world</p>
+   <!-- <p style="border: 1px solid black; outline: 5px solid red; outline-offset: 10px;">hello world</p>
    <h1>hello world</h1>
    <script>
     const root = document.querySelector(":root");
     console.log(root);
-   </script>
+   </script> -->
 </body>
 
 </html>
