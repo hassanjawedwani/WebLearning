@@ -1,27 +1,145 @@
-// const fruits = ["apple", "banana", "mango", "strawberry"];
+const fruits = ["apple", "banana", "mango", "strawberry"];
 
 const ag5883 = {
   name: "hassan jawed",
   ag: "2021-ag-5883",
   semester: 7,
   married: false,
-  get details() {
-    return this.name.toUpperCase() + " " + this.ag;
-  },
-  getDetails: function() {
-    return this.name + " " + this.ag;
-  },
-  set setSemester(currSemester) {
-    this.semester = currSemester;
-  }
 };
 
 const ag5992 = {
   name: "ahmad",
   age: 23,
   semester: 9
-
 };
+
+// function showName() {
+//   alert("Hassan Jawed");
+// }
+
+// const showName = function () { alert("Hassan Jawed") };
+
+// const showName = new Function(`() => {${alert("hassna")}}`);
+
+// document.getElementById("btn").addEventListener('click', () => {
+//   showNameVar();
+// })
+
+
+
+// showName();
+
+// function showName() { // hoisted
+//   alert("hassan");
+// }
+
+
+// const showName = () => { alert("hassan") }; // not hoisted
+
+
+// (function showName() { //self invoking function
+//   alert("hassan jawed");
+// })();
+  
+// (function () {  //anonymus self invoking function
+//   alert("hassan jawed");
+// })();
+
+// function randomValue () {
+//   return Math.random() * 10;
+// }
+
+// console.log(randomValue() + 100);
+
+
+// function add(a, b, c) {
+//   return a + b + c;
+// }
+
+// console.log(typeof (add)); // type is function but more like object
+// console.log(add.length);
+// console.log(add.toString());
+
+
+// const sum = (a, b) => a + b;
+// console.log(sum(23, 27));
+
+//! not a number NaN | argument length is not checked
+// const sum = (a, b) => a + b;
+// console.log(sum(23));
+
+
+//! argument types are not checked
+// const sum = (a, b) => a + b;
+// console.log(sum(23, "ads"));
+
+//! parameter can't specify data types
+// const sum = (a, b) => a + b;
+// console.log(sum(23, 23.23));
+
+// ? not a number NaN error
+// * solution
+// const sum = (a, b = 23) => a + b;
+// console.log(sum(23));
+
+// * another solution
+// const sum = (a, b) => {
+//   if (b === undefined) {
+//     b = 10;
+//   }
+//   return a + b;
+// }
+// console.log(sum(23));
+
+// ? when someone don't know numbers of parameters
+// function sum(...rest) {
+//   let total = 0;
+//   for (const val of rest) {
+//     total += val;
+//   }
+//   return total;
+// }
+// console.log(sum(23, 23, 43,34));
+
+// * another solution
+// function sum() {
+//   let total = 0;
+//   for (const val of arguments) {
+//     total += val;
+//   }
+//   return total;
+// }
+// console.log(sum(23, 23, 43,34, 23));
+
+// let a = 10;
+// function changeValue(a) {
+//   a = 20;
+//   return a;
+// }
+
+// const obj = { name: "hassan" };
+// const anotherObj = obj;
+// anotherObj.name = "jawed";
+// console.log(obj);
+// console.log(anotherObj)
+
+// const obj = { name: "hassan" };
+// function changeValue(obj) {
+//   obj.name = "jawed";
+// }
+// changeValue(obj);
+// console.log(obj);
+
+
+const obj = { name: "hassan" };
+function changeValue(obj) {
+  obj = { class: "bed" };
+}
+changeValue(obj);
+console.log(obj);
+
+
+
 
 // const text = Object.entries(ag5883);
 
@@ -165,16 +283,16 @@ const ag5992 = {
 
 // console.log(hello());
 
-class Header {
-  constructor(color) {
-    this.color = color;
-  };
-  data = function() {
-  console.log(this);
-  }
-}
-const myHeader = new Header("blue");
+// class Header {
+//   constructor(color) {
+//     this.color = color;
+//   };
+//   data = function() {
+//   console.log(this);
+//   }
+// }
+// const myHeader = new Header("blue");
 
-window.addEventListener("load", myHeader.data);
-const button = document.getElementById("btn");
-button.addEventListener("click", myHeader.data);
+// window.addEventListener("load", myHeader.data);
+// const button = document.getElementById("btn");
+// button.addEventListener("click", myHeader.data);
