@@ -13,6 +13,51 @@ const ag5992 = {
   semester: 9
 };
 
+
+// class ConstructorFunction { 
+//   constructor(arg1, arg2) {
+//     this.firstname = arg1;
+//     this.lastname = arg2;
+//   }
+// };
+
+// const person = new ConstructorFunction("hassan", "jawed");
+// console.log(person.firstname);
+
+
+// function constructorFunction(arg1, arg2) {
+//   this.firstname = arg1;
+//   this.lastname = arg2;
+// }
+
+// const person = new constructorFunction("hassan", "jawed");
+// console.log(person.firstname);
+
+
+
+// const person = {
+//   name: "hassan jawed",
+//   detail: function () {
+//     return this;
+//   }
+// }
+
+// console.log(person.detail());
+
+// function temp() {
+//   return this;
+// }
+// console.log(temp());
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// console.log(add(10, 20));
+// console.log(window.add(10, 20));
+
+
+
 // function showName() {
 //   alert("Hassan Jawed");
 // }
@@ -131,12 +176,12 @@ const ag5992 = {
 // console.log(obj);
 
 
-const obj = { name: "hassan" };
-function changeValue(obj) {
-  obj = { class: "bed" };
-}
-changeValue(obj);
-console.log(obj);
+// const obj = { name: "hassan" };
+// function changeValue(obj) {
+//   obj = { class: "bed" };
+// }
+// changeValue(obj);
+// console.log(obj);
 
 
 
