@@ -34,7 +34,7 @@
         /* border-radius: 1rem;
         border-collapse: collapse; */
       }
-
+/* 
       table {
         width: 100%;
       }
@@ -42,10 +42,10 @@
       table, th, td {
       border: 2px solid grey;
       border-collapse: collapse;
-      /* background-color: white;
+     background-color: white;
       border: 1px solid black;
       border-collapse: collapse;
-      border-radius: 5px; */
+      border-radius: 5px; 
       } 
 
       th:first-of-type {
@@ -54,13 +54,78 @@
 
       tr:nth-of-type(2) {
         height: 400px;;
+      } */
+/* 
+      table {
+        width: 100%;
+      } */
+     
+
+      table, th, td {
+        /* border: 1px solid black; */
+        border-collapse: collapse; 
+        padding-top: 15px;
+        padding-left: 200px;
+        padding-bottom: 20px;
       }
+      tr {
+        border-bottom: 2px solid grey;
+      }
+
+      tr:hover {
+        background-color: grey;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      /* th:nth-child(even), tr:nth-child(even) {
+        background-color: blue;
+      }
+
+     tr:nth-child(odd) {
+        background-color: grey;
+      } */
+
 
     </style>
   </head>
   <body>
   <div> <!-- background-color: black; padding: 20px; -->
     <table>
+      <caption>Home Data</caption>
+      <thead>
+        <tr>
+          <th colspan="2">Name</th>
+          <td>Gender</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>name</th>
+          <td>second name</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <th>Numan</th>
+          <td>5223</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Ahmad</th>
+          <td>2383</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          
+          <td>1283</td>
+          <td>Female</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -91,7 +156,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </div> -->
 
 
   <!-- next table header  -->
