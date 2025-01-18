@@ -11,7 +11,63 @@ const ag5992 = {
   name: "ahmad",
   age: 23,
   semester: 9
-};
+}; 
+
+// console.log(Math.max(3, 2, 1, 2, 3));
+// const values = [3, 2, 1, 2, 3];
+// console.log(Math.max(values)); // error
+// console.log(Math.max.apply(null, values));
+// console.log(Math.max.apply(Math, values));
+// console.log(Math.max.apply(0, values));
+
+
+
+
+// const person = {
+//   fullDetail: function (gender, country) {
+//     return this.firstName + " " + this.lastName + " " + gender + " " + country;
+//   }
+// };
+
+// const person1 = {
+//   firstName: "Hassan",
+//   lastName: "Jawed"
+// };
+
+// const person2 = {
+//   firstName: "Numan",
+//   lastName: "Jawed"
+// };
+
+
+// console.log(person.fullDetail.call(person1, "male", "pakistan"))
+// console.log(person.fullDetail.apply(person1,["male", "newzeland"]))
+// console.log(person.fullDetail.call(person2, "male", "pakistan"))
+// console.log(person.fullDetail.apply(person2, ["male", "newzeland"]))
+
+
+// const person = {
+//   fullDetail: function () {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+
+// const person1 = {
+//   firstName: "Hassan",
+//   lastName: "Jawed"
+// };
+
+// const person2 = {
+//   firstName: "Numan",
+//   lastName: "Jawed"
+// };
+
+
+// console.log(person.fullDetail.call(person1))
+// console.log(person.fullDetail.apply(person1));
+// console.log(person.fullDetail.call(person2))
+// console.log(person.fullDetail.apply(person2))
+
 
 
 // class ConstructorFunction { 
