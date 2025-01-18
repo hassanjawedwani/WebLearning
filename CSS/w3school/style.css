@@ -28,7 +28,7 @@ div {
 }
 
 */
-
+/* 
 :root {
   --fc: orange;
   --sc: pink;
@@ -39,10 +39,10 @@ div {
   height: 400px;
   background: linear-gradient(var(--fc), var(--sc));
   animation: gradient 3s linear infinite;
-}
+} */
 
 
-@keyframes gradient {
+/* @keyframes gradient {
   0%,
   100% {
      --fc: black;
@@ -52,4 +52,22 @@ div {
      --fc: red;
      --sc: blue;
   }
+} */
+
+/* * {
+  background-color: blue;
+} */
+ 
+@media (max-width: 1400px) {
+  body {
+    background-color: blue;;
+  }
 }
+
+@media (max-width: 768px) {
+  body {
+    background-color: black;;
+  }
+}
+
+
