@@ -1,16 +1,14 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import ReactDOM from "react-dom/client";
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
 //     <App />
 //   </StrictMode>,
 // )
-
-
-
 
 // const jsx = (
 //   <>
@@ -31,7 +29,6 @@ import App from './App.jsx'
 //   </>
 // );
 
-
 // let x = 10;
 // let str = "hello";
 
@@ -47,15 +44,49 @@ import App from './App.jsx'
 //   }
 // }
 
+// class SubJsx extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       color: "blue"
+//     }
+//   }
+//   render() {
+//     return <h1>Hello {this.state.color} World</h1>
+//   }
+// }
 
+// class SubJsx extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+//   render() {
+//     return <span>Hello {this.props.color} World</span>
+//   }
+// }
 
-function Jsx(props) {
-  return <h1><InnerJsx /> Hello World {props.color} Pakistan</h1>
+class Car extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      color: "blue",
+    };
+  }
+  changeColor = () => {
+    this.setState({ color: "red" });
+  }
+
+  render() {
+    return <div style={{ backgroundColor: this.state.color }}>hello world<button onClick={this.changeColor}>Change color</button></div>;
+  }
 }
 
+function Jsx() {
+  return (
+    <>
+      <Car />
+    </>
+  );
+}
 
-import ReactDOM from 'react-dom/client'
-import InnerJsx from './InnerJsx.jsx'
-const container = document.getElementById("root");
-const root = ReactDOM.createRoot(container);
-root.render(<Jsx color="Green"/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<Jsx />);
