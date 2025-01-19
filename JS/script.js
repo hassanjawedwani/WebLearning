@@ -1,17 +1,115 @@
-const fruits = ["apple", "banana", "mango", "strawberry"];
 
-const ag5883 = {
-  name: "hassan jawed",
-  ag: "2021-ag-5883",
-  semester: 7,
-  married: false,
-};
+// function add() {
+//   let count = 0;
+//   function plus() {
+//     count++;
+//   }
+//   plus();
+//   return count;
+// }
 
-const ag5992 = {
-  name: "ahmad",
-  age: 23,
-  semester: 9
-}; 
+const add = (function () {
+  let count = 0;
+  return function () {
+    count++;
+    return count
+  };
+})();
+
+
+console.log(add());
+console.log(add());
+console.log(add());
+console.log(add());
+
+// let a = 10;
+
+// function temp() {
+//   let a = 20;
+//   a = 20
+//   console.log(a);
+// }
+
+// temp();
+// console.log(a);
+
+
+// function createCounter() {
+//   let counter = 0;
+//   return function () {
+//     counter++;
+//     console.log(counter);
+//   }
+// }
+
+// const counter1 = createCounter();
+// counter1();
+// counter1();
+// counter1();
+// counter1();
+
+// const counter2 = createCounter();
+// counter2();
+// counter2();
+// counter2();
+// counter2();
+
+// function outerFunction() {
+//   let outerVariable = "I'm outer variable";
+//   function innerFunction() {
+//     console.log(outerVariable);
+//   }
+//   return innerFunction;
+// }
+
+// let closure = outerFunction();
+// closure();
+
+// const person = {
+//   firstName: "Hassan",
+//   lastName: "Jawed",
+//   fullName: function () {
+//     console.log(this.firstName + " " + this.lastName);
+//   } 
+// }
+// let display = person.fullName.bind(person);
+// setTimeout(display, 3000); // this lost after calling full name
+
+
+
+
+
+// const person = {
+//   firstName: "Hassan",
+//   lastName: "Jawed",
+//   fullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   } 
+// }
+
+// const member = {
+//   firstName: "Ahmad",
+//   lastName: "Hasaan"
+// }
+
+// console.log(person.fullName.bind(member)());
+// console.log(person.fullName.call(member));
+// console.log(person.fullName.apply(member));
+
+// const fruits = ["apple", "banana", "mango", "strawberry"];
+
+// const ag5883 = {
+//   name: "hassan jawed",
+//   ag: "2021-ag-5883",
+//   semester: 7,
+//   married: false,
+// };
+
+// const ag5992 = {
+//   name: "ahmad",
+//   age: 23,
+//   semester: 9
+// }; 
 
 // console.log(Math.max(3, 2, 1, 2, 3));
 // const values = [3, 2, 1, 2, 3];
