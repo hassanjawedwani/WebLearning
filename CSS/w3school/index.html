@@ -14,12 +14,60 @@
       mask-repeat: no-repeat;    
       mask-position: center; */
     /* } */
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      background-color: grey;
+    }
+    li {
+      list-style-type: none;
+
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+
+    }
+    a:hover {
+      background-color: rgb(150, 98, 98);;
+    }
+
+    @media screen and (min-width: 600px) {
+      ul {
+        font-size: 30px
+      }
+    }
+
+
+    @media screen and (max-width: 600px) {
+      ul {
+        flex-direction: column;
+      }
+      .hide {
+        display: none;
+      }
+    }
   </style>
   <link rel="stylesheet"  href="style.css" />
-
 </head>
 <body>
-  <div id="box"></div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">Contact us</a></li>
+    <li class="hide"><a href="#">Contact me</a></li>
+  </ul>
+
+
+
+
+
+
+
+  <!-- <div id="box">hello box</div> -->
 
 
   <!-- <div class="seperate">serper</div>

@@ -57,15 +57,16 @@ div {
 /* * {
   background-color: blue;
 } */
+
  
-@media (max-width: 1400px) {
-  body {
+@media screen and (max-width: 992px) {
+  div {
     background-color: blue;;
   }
 }
 
-@media (max-width: 768px) {
-  body {
+@media screen and (max-width: 600px) {
+  div {
     background-color: black;;
   }
 }
