@@ -1,3 +1,127 @@
+// console.log(x);
+// undefined for var
+// var x = 10;
+
+// console.log(x);
+// refernece error , cant access , TDZ(temp dead zone)
+// let x = 10;
+
+
+// function are fully hosted
+// console.log(myName());
+
+// function myName() {
+//   return "hassan"
+// }
+
+// const myName = () => {
+//   return "hassan";
+// }
+
+// classess are not hoisted
+// ! can't access model before initializaiton
+// const myCar = new Model("cadilac");
+// console.log(myCar.detail);
+// class Model {
+//   constructor(carName) {
+//     this.carName = carName;
+//   }
+//   get detail() {
+//     return this.carName;
+//   }
+//   set detail(carName) {
+//     this.carName = carName;
+//   }
+  
+// }
+
+
+
+// ! error because property name is same is as getter and setter
+// class Model {
+//   constructor(car) {
+//     this.model = car;
+//   }
+//   get model() {
+//     return this.model;
+//   }
+//   set model(car) {
+//     this.model = model;
+//   }
+// }
+// const myCar = new Model("cadilac");
+// console.log(myCar.model);
+
+
+// * solution is to use _ before property name;
+// class Model {
+//   constructor(car) {
+//     this._model = car;
+//   }
+//   get model() {
+//     return this._model;
+//   }
+//   set model(car) {
+//     this.model = _model;
+//   }
+  
+// }
+
+// const myCar = new Model("mercedes");
+// console.log(myCar.model);
+
+// console.log(myCar);
+// myCar.set(2027);
+// console.log(myCar);
+// console.log(myCar.get);
+
+
+
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   getCarName() {
+//     return "I have " + this.name;
+//   }
+// }
+
+// class Model extends Car {
+//   constructor(name, model, price) {
+//     super(name);
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getCompleteDetail() {
+//     return this.getCarName() + " and model is " + this.model + " and price is " + this.price;
+//   }
+// }
+
+// const myCar = new Model("Cadilac", 2024, "179000");
+// console.log(myCar.getCompleteDetail());
+
+
+
+// class Car {
+//   constructor(brand, model, price) {
+//     this.brandName = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   age() {
+//     const currentDate = new Date();
+//     const currentYear = currentDate.getFullYear();
+//     return currentYear - this.model;
+//   }
+// }
+
+// const audi = new Car("audi", 2020, "140000");
+// const lemborgini = new Car("lamborgin", 2021, "230000");
+
+// // console.log(audi);
+// // console.log(lemborgini);
+// console.log("audi age: ", audi.age());
+
 
 // function add() {
 //   let count = 0;
@@ -8,19 +132,19 @@
 //   return count;
 // }
 
-const add = (function () {
-  let count = 0;
-  return function () {
-    count++;
-    return count
-  };
-})();
+// const add = (function () {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count
+//   };
+// })();
 
 
-console.log(add());
-console.log(add());
-console.log(add());
-console.log(add());
+// console.log(add());
+// console.log(add());
+// console.log(add());
+// console.log(add());
 
 // let a = 10;
 
