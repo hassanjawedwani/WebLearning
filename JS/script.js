@@ -1,3 +1,160 @@
+// JS CallBack : when a function is passed as argument to another functiion
+
+// function display(str) {
+//   document.getElementById("temp").innerText = str;
+// }
+
+// function first() {
+//   display("helloworld");
+// }
+
+// function second() {
+//   display("Goodbye");
+// }
+
+// second();
+// first();
+
+// function display(calculations) {
+//   document.getElementById("temp").innerText = calculations;
+// }
+
+// function calculator(x, y) {
+//   const value = x + y;
+//   display(value);
+// }
+
+// calculator(5, 5);
+
+// function display(calculations) {
+//   document.getElementById("temp").innerText = calculations;
+// }
+
+// function calculator(x, y, myCallBack) {
+//   const value = x + y;
+//   myCallBack(value);
+// }
+
+// calculator(5, 51, display);
+
+
+// const numbers = [4, 1, -20, -7, 5, 9, -6];
+
+// function getPositiveNumbers(numbers) {
+//   const positiveNumbers = [];
+//   for (const number of numbers) {
+//     if (number >= 0) {
+//       positiveNumbers.push(number);
+//     }
+//   }
+//   return positiveNumbers;
+// }
+
+// const positiveNumbers = getPositiveNumbers(numbers);
+
+// console.log(positiveNumbers);
+
+// const numbers = [4, 1, -20, -7, 5, 9, -6];
+
+// function isPositive(number) {
+//   return number >= 0 ? true : false;
+// }
+
+// function getPositiveNumbers(numbers) {
+//   const positiveNumbers = [];
+//   for (const number of numbers) {
+//     if (isPositive(number)) {
+//       positiveNumbers.push(number);
+//     }
+//   }
+//   return positiveNumbers;
+// }
+
+// const positiveNumbers = getPositiveNumbers(numbers);
+
+// console.log(positiveNumbers);
+
+
+// const numbers = [4, 1, -20, -7, 5, 9, -6, 8];
+
+// function isPositive(number) {
+//   return number >= 0 ? true : false;
+// }
+
+// function getPositiveNumbers(numbers, myCallBack) {
+//   const positiveNumbers = [];
+//   for (const number of numbers) {
+//     if (myCallBack(number)) {
+//       positiveNumbers.push(number);
+//     }
+//   }
+//   return positiveNumbers;
+// }
+
+// const positiveNumbers = getPositiveNumbers(numbers, isPositive);
+
+// console.log(positiveNumbers);
+
+
+// function myDisplayer(value) {
+//   document.getElementById("temp").textContent = value;
+// }
+
+// function myCalculator(x, y, myCallBack) {
+//   myCallBack(x + y);
+// }
+
+// myCalculator(10, 10, myDisplayer);
+
+
+// setTimeout(myFunction, 3000);
+
+// function myFunction() {
+//   document.getElementById("temp").textContent = "Hello after 3 sec";
+// }
+
+// setTimeout(myFunction(), 3000);
+
+// function myFunction() {
+//   document.getElementById("temp").textContent = "Hello immediately";
+// }
+
+// setTimeout(() => {
+//   document.getElementById("temp").textContent = "Hello after 3 sec";
+// }, 3000);
+
+
+// setInterval(currentTime, 2000);
+
+// function currentTime() {
+//   const time = new Date();
+//   const Years = time.getFullYear();
+//   const months = time.getMonth()+1;
+//   const days = time.getDate()
+//   const hours = time.getHours();
+//   const minutes = time.getMinutes();
+//   const seconds = time.getSeconds();
+//   document.getElementById("temp").innerHTML += `${hours}:${minutes}  ${days}/${months}/${Years} <br />`;
+// }
+
+
+// class Car {
+//   constructor(carName) {
+//     this.carName = carName;
+//   }
+//   static hello(obj) {
+//     return "Hello world" + obj.carName;
+//   }
+//   helloworld() {
+//     return "hello world";
+//   }
+// }
+
+// const myCar = new Car("ford");
+
+// console.log(Car.hello(myCar));
+
+
 // console.log(x);
 // undefined for var
 // var x = 10;
