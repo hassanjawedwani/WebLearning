@@ -9,11 +9,18 @@
 //   );
 // }
 
-import { name, age } from './person.js';
-import message from './message.js';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Blogs from "./pages/Blogs";
+import NoPage from "./pages/NoPage";
+
+// import { name, age } from './person.js';
+// import message from './message.js';
 
 
-export default function App() {
+// export default function App() {
   // const vehicals = ["mustang", "f-150", "ferari", "expedition"];
   // destructing
   // const car = vehicals[0];
@@ -75,11 +82,28 @@ export default function App() {
   // console.log({...fruits, ...vegitables})
     // console.log(name, age);
     // console.log(message());
+//   return (
+//     <>
+//       <p>
+//         hhello
+//       </p>
+//     </>
+//   );
+// }
+
+function App() {
   return (
-    <>
-      <p>
-        hhello
-      </p>
-    </>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
+
+export default App;
