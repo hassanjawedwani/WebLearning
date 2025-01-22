@@ -1,16 +1,62 @@
-const myPromise = new Promise((myResolve, myReject) => {
-  myResolve("I Love You!");
-});
+// function myFunction() {
+//   let promise = new Promise((myResolve, myReject) => {
+//     setTimeout(() => {
+//       myResolve("I love Youuuu");
+//     }, 3000);
+//   });
 
-myPromise.then(function (value) {
-  setTimeout(() => {
-    console.log(value);
-  }, 3000);
-});
+//   promise.then(
+//     (value) => {
+//       console.log("Promise value with then " + value);
+//     },
+//     (error) => {
+//       console.log("Promise error with then " + error);
+//     }
+//   );
+// }
 
+// myFunction()
 
+// async function myFunction() {
+//   let promise = new Promise((myResolve, myReject) => {
+//     setTimeout(() => {
+//       myResolve("I love Youuuu");
+//     }, 3000);
+//   });
 
+//   try {
+//     const promiseValue = await promise;
+//     console.log("Promise value with await " + promiseValue);
+//   } catch (error) {
+//     console.log("Some error occured " + error);
+//   }
+// }
 
+// myFunction();
+
+// async function myFunction() {
+//   return "Hello World";
+// }
+// myFunction().then(
+//   (value) => { console.log(value) },
+// );
+
+// function myFunction() {
+//   return Promise.resolve("Hello World");
+// }
+// myFunction().then((value) => {
+//   console.log(value);
+// })
+
+// const myPromise = new Promise((myResolve, myReject) => {
+//   myResolve("I Love You!");
+// });
+
+// myPromise.then(function (value) {
+//   setTimeout(() => {
+//     console.log(value);
+//   }, 3000);
+// });
 
 // const myPromise = new Promise((myResolve, myReject) => {
 //   let i = 0;
@@ -20,7 +66,6 @@ myPromise.then(function (value) {
 //     myReject("Error");
 //   }
 // });
-
 
 // myPromise.then(
 //   (value) => { console.log(value) },
@@ -66,7 +111,6 @@ myPromise.then(function (value) {
 
 // calculator(5, 51, display);
 
-
 // const numbers = [4, 1, -20, -7, 5, 9, -6];
 
 // function getPositiveNumbers(numbers) {
@@ -103,7 +147,6 @@ myPromise.then(function (value) {
 
 // console.log(positiveNumbers);
 
-
 // const numbers = [4, 1, -20, -7, 5, 9, -6, 8];
 
 // function isPositive(number) {
@@ -124,7 +167,6 @@ myPromise.then(function (value) {
 
 // console.log(positiveNumbers);
 
-
 // function myDisplayer(value) {
 //   document.getElementById("temp").textContent = value;
 // }
@@ -134,7 +176,6 @@ myPromise.then(function (value) {
 // }
 
 // myCalculator(10, 10, myDisplayer);
-
 
 // setTimeout(myFunction, 3000);
 
@@ -152,7 +193,6 @@ myPromise.then(function (value) {
 //   document.getElementById("temp").textContent = "Hello after 3 sec";
 // }, 3000);
 
-
 // setInterval(currentTime, 2000);
 
 // function currentTime() {
@@ -165,7 +205,6 @@ myPromise.then(function (value) {
 //   const seconds = time.getSeconds();
 //   document.getElementById("temp").innerHTML += `${hours}:${minutes}  ${days}/${months}/${Years} <br />`;
 // }
-
 
 // class Car {
 //   constructor(carName) {
@@ -183,7 +222,6 @@ myPromise.then(function (value) {
 
 // console.log(Car.hello(myCar));
 
-
 // console.log(x);
 // undefined for var
 // var x = 10;
@@ -191,7 +229,6 @@ myPromise.then(function (value) {
 // console.log(x);
 // refernece error , cant access , TDZ(temp dead zone)
 // let x = 10;
-
 
 // function are fully hosted
 // console.log(myName());
@@ -218,10 +255,8 @@ myPromise.then(function (value) {
 //   set detail(carName) {
 //     this.carName = carName;
 //   }
-  
+
 // }
-
-
 
 // ! error because property name is same is as getter and setter
 // class Model {
@@ -238,7 +273,6 @@ myPromise.then(function (value) {
 // const myCar = new Model("cadilac");
 // console.log(myCar.model);
 
-
 // * solution is to use _ before property name;
 // class Model {
 //   constructor(car) {
@@ -250,7 +284,7 @@ myPromise.then(function (value) {
 //   set model(car) {
 //     this.model = _model;
 //   }
-  
+
 // }
 
 // const myCar = new Model("mercedes");
@@ -260,8 +294,6 @@ myPromise.then(function (value) {
 // myCar.set(2027);
 // console.log(myCar);
 // console.log(myCar.get);
-
-
 
 // class Car {
 //   constructor(name) {
@@ -286,8 +318,6 @@ myPromise.then(function (value) {
 // const myCar = new Model("Cadilac", 2024, "179000");
 // console.log(myCar.getCompleteDetail());
 
-
-
 // class Car {
 //   constructor(brand, model, price) {
 //     this.brandName = brand;
@@ -308,7 +338,6 @@ myPromise.then(function (value) {
 // // console.log(lemborgini);
 // console.log("audi age: ", audi.age());
 
-
 // function add() {
 //   let count = 0;
 //   function plus() {
@@ -326,7 +355,6 @@ myPromise.then(function (value) {
 //   };
 // })();
 
-
 // console.log(add());
 // console.log(add());
 // console.log(add());
@@ -342,7 +370,6 @@ myPromise.then(function (value) {
 
 // temp();
 // console.log(a);
-
 
 // function createCounter() {
 //   let counter = 0;
@@ -380,21 +407,17 @@ myPromise.then(function (value) {
 //   lastName: "Jawed",
 //   fullName: function () {
 //     console.log(this.firstName + " " + this.lastName);
-//   } 
+//   }
 // }
 // let display = person.fullName.bind(person);
 // setTimeout(display, 3000); // this lost after calling full name
-
-
-
-
 
 // const person = {
 //   firstName: "Hassan",
 //   lastName: "Jawed",
 //   fullName: function () {
 //     return this.firstName + " " + this.lastName;
-//   } 
+//   }
 // }
 
 // const member = {
@@ -419,7 +442,7 @@ myPromise.then(function (value) {
 //   name: "ahmad",
 //   age: 23,
 //   semester: 9
-// }; 
+// };
 
 // console.log(Math.max(3, 2, 1, 2, 3));
 // const values = [3, 2, 1, 2, 3];
@@ -427,9 +450,6 @@ myPromise.then(function (value) {
 // console.log(Math.max.apply(null, values));
 // console.log(Math.max.apply(Math, values));
 // console.log(Math.max.apply(0, values));
-
-
-
 
 // const person = {
 //   fullDetail: function (gender, country) {
@@ -447,12 +467,10 @@ myPromise.then(function (value) {
 //   lastName: "Jawed"
 // };
 
-
 // console.log(person.fullDetail.call(person1, "male", "pakistan"))
 // console.log(person.fullDetail.apply(person1,["male", "newzeland"]))
 // console.log(person.fullDetail.call(person2, "male", "pakistan"))
 // console.log(person.fullDetail.apply(person2, ["male", "newzeland"]))
-
 
 // const person = {
 //   fullDetail: function () {
@@ -470,15 +488,12 @@ myPromise.then(function (value) {
 //   lastName: "Jawed"
 // };
 
-
 // console.log(person.fullDetail.call(person1))
 // console.log(person.fullDetail.apply(person1));
 // console.log(person.fullDetail.call(person2))
 // console.log(person.fullDetail.apply(person2))
 
-
-
-// class ConstructorFunction { 
+// class ConstructorFunction {
 //   constructor(arg1, arg2) {
 //     this.firstname = arg1;
 //     this.lastname = arg2;
@@ -488,7 +503,6 @@ myPromise.then(function (value) {
 // const person = new ConstructorFunction("hassan", "jawed");
 // console.log(person.firstname);
 
-
 // function constructorFunction(arg1, arg2) {
 //   this.firstname = arg1;
 //   this.lastname = arg2;
@@ -496,8 +510,6 @@ myPromise.then(function (value) {
 
 // const person = new constructorFunction("hassan", "jawed");
 // console.log(person.firstname);
-
-
 
 // const person = {
 //   name: "hassan jawed",
@@ -520,8 +532,6 @@ myPromise.then(function (value) {
 // console.log(add(10, 20));
 // console.log(window.add(10, 20));
 
-
-
 // function showName() {
 //   alert("Hassan Jawed");
 // }
@@ -534,22 +544,18 @@ myPromise.then(function (value) {
 //   showNameVar();
 // })
 
-
-
 // showName();
 
 // function showName() { // hoisted
 //   alert("hassan");
 // }
 
-
 // const showName = () => { alert("hassan") }; // not hoisted
-
 
 // (function showName() { //self invoking function
 //   alert("hassan jawed");
 // })();
-  
+
 // (function () {  //anonymus self invoking function
 //   alert("hassan jawed");
 // })();
@@ -560,7 +566,6 @@ myPromise.then(function (value) {
 
 // console.log(randomValue() + 100);
 
-
 // function add(a, b, c) {
 //   return a + b + c;
 // }
@@ -569,14 +574,12 @@ myPromise.then(function (value) {
 // console.log(add.length);
 // console.log(add.toString());
 
-
 // const sum = (a, b) => a + b;
 // console.log(sum(23, 27));
 
 //! not a number NaN | argument length is not checked
 // const sum = (a, b) => a + b;
 // console.log(sum(23));
-
 
 //! argument types are not checked
 // const sum = (a, b) => a + b;
@@ -639,16 +642,12 @@ myPromise.then(function (value) {
 // changeValue(obj);
 // console.log(obj);
 
-
 // const obj = { name: "hassan" };
 // function changeValue(obj) {
 //   obj = { class: "bed" };
 // }
 // changeValue(obj);
 // console.log(obj);
-
-
-
 
 // const text = Object.entries(ag5883);
 
@@ -677,7 +676,6 @@ myPromise.then(function (value) {
 //   {name:"oranges", quantity:200},
 //   {name:"kiwi", quantity:150}
 // ];
-
 
 // const result = Object.groupBy(fruits, ({ quantity }) => quantity > 200 ? "ok" : "fuck");
 // console.log(result.ok);
