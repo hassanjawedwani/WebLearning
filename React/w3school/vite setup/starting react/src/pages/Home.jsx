@@ -3,13 +3,16 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
+  useMemo,
   useReducer,
   useRef,
 } from "react";
 import { useState } from "react";
 import { compile } from "sass";
+import Todo from "../Todo";
 
 // const Home = () => {
 //   const [count, setCount] = useState(0);
@@ -307,61 +310,116 @@ import { compile } from "sass";
 
 // export default Home
 
-const initialState = [
-  {
-    id: 1,
-    title: "todo 1",
-    complete: false,
-  },
-  {
-    id: 2,
-    title: "todo 2",
-    complete: true,
-  },
-  {
-    id: 3,
-    title: "todo 3",
-    complete: false,
-  },
-];
+// const initialState = [
+//   {
+//     id: 1,
+//     title: "todo 1",
+//     complete: false,
+//   },
+//   {
+//     id: 2,
+//     title: "todo 2",
+//     complete: true,
+//   },
+//   {
+//     id: 3,
+//     title: "todo 3",
+//     complete: false,
+//   },
+// ];
 
-function Home() {
-  const [todos, dispatch] = useReducer(reducer, initialState);
-  function handleChange(todo) {
-    dispatch({ type: "Complete", id: todo.id });
-  }
+// function Home() {
+//   const [todos, dispatch] = useReducer(reducer, initialState);
+//   function handleChange(todo) {
+//     dispatch({ type: "Complete", id: todo.id });
+//   }
 
+//   return (
+//     <>
+//       <h3>Here is your task list:</h3>
+//       {todos.map((todo) => (
+//         <label key={todo.id}>
+//           <input
+//             type="checkbox"
+//             checked={todo.complete}
+//             onChange={() => {
+//               handleChange(todo);
+//             }}
+//           />
+//           {todo.title}
+//         </label>
+//       ))}
+//       {console.log(todos)}
+//     </>
+//   );
+// }
+
+// function reducer(state, action) {
+//   switch (action.type) {
+//     case "Complete":
+//       return state.map((todo) => {
+//         if (todo.id === action.id) {
+//           return { ...todo, complete: !todo.complete };
+//         } else {
+//           return todo;
+//         }
+//       });
+//   }
+// }
+
+// export default Home;
+
+
+
+// const Home = () => {
+//   const [count, setCount] = useState(0);
+//   const [todos, setTodos] = useState([]);
+//   console.log("home render")
+//   // function addTodo() {
+//   //   setTodos(todos => [...todos, "new todo"]);
+//   // }
+//   const addTodo = useMemo(() => {
+//     return () => setTodos(todos => [...todos, "new todo"][todos]);
+//   }, [todos]);
+//   return (
+//     <div>
+//       <Todo todos={todos} addTodo={addTodo} />
+//       <h1>Count: {count}</h1>
+//       <button onClick={() => {setCount(prevCount => prevCount + 1)}}>Increment</button>
+//     </div>
+//   )
+// }
+
+// export default Home
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => setData(data));
+  }, [url])
+  
+  return [data]
+}
+
+
+
+const Home = () => {
+  
+  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
   return (
-    <>
-      <h3>Here is your task list:</h3>
-      {todos.map((todo) => (
-        <label key={todo.id}>
-          <input
-            type="checkbox"
-            checked={todo.complete}
-            onChange={() => {
-              handleChange(todo);
-            }}
-          />
-          {todo.title}
-        </label>
-      ))}
-      {console.log(todos)}
-    </>
-  );
-}
-
-function reducer(state, action) {
-  switch (action.type) {
-    case "Complete":
-      return state.map((todo) => {
-        if (todo.id === action.id) {
-          return { ...todo, complete: !todo.complete };
-        } else {
-          return todo;
+    <div>
+      <h1>Todos:</h1>
+      <ul>
+        {
+          data && data.map((todo) => <li key={todo.id}>{todo.title}</li>)
         }
-      });
-  }
+      </ul>
+    </div>
+  )
 }
 
-export default Home;
+
+export default Home
