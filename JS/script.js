@@ -1,3 +1,32 @@
+const myPromise = new Promise((myResolve, myReject) => {
+  myResolve("I Love You!");
+});
+
+myPromise.then(function (value) {
+  setTimeout(() => {
+    console.log(value);
+  }, 3000);
+});
+
+
+
+
+
+// const myPromise = new Promise((myResolve, myReject) => {
+//   let i = 0;
+//   if (i == 0) {
+//     myResolve("iOk");
+//   } else {
+//     myReject("Error");
+//   }
+// });
+
+
+// myPromise.then(
+//   (value) => { console.log(value) },
+//   (error) => { console.log(error) }
+// );
+
 // JS CallBack : when a function is passed as argument to another functiion
 
 // function display(str) {
