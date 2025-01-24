@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Styling Images</title>
-     <style> 
+    <style>
       /* .mask { */
       /* -webkit-mask-image: url(assets/rb_2148203400.png);
       mask-image: url(assets/rb_2148203400.png);
@@ -78,30 +78,83 @@
           flex: 100%;
         }
       } */
-/* 
+      /* 
     @media screen and (orientation: landscape) {
       div {
         background-color: lightblue;;
       }
     } */
-     /* @media screen and (max-width: 998px) and (min-width: 600px){
+      /* @media screen and (max-width: 998px) and (min-width: 600px){
       div {
         background-color: blue;
       }
      } */
+      /* .container {
+      display: flex;
+      background-color: rgb(181, 181, 189);
+      height: 400px;
+     }
 
-    
+     .container > div {
+      width: 100px;
+      background-color: blue;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;;
+      margin: 10px;
+      line-height: 75px;
+     }
+     */
+      .container {
+        display: flex;
+        font-size: 40px;
+        flex-wrap: wrap;
+      }
 
-    
+      .container div:first-child {
+        background-color: blue;
+        flex: 50%;
+      }
+      .container div:last-child {
+        background-color: red;
+        flex: 50%;
+      }
+
+      @media screen and (max-width: 800px) {
+        .container div:first-child {
+          flex: 100%;
+        }
+        .container div:last-child {
+          flex: 100%;
+        }
+      }
     </style>
   </head>
   <body>
-
-    <div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="container">
+      <div style="">1</div>
+      <div style="">2</div>
     </div>
+
+    <!-- <div class="container">
+      <div style="align-self: flex-start;">1</div>
+      <div style="align-self: center">2</div>
+      <div style="align-self: flex-end">1</div>
+      <div style="align-self: stretch">2</div>
+      <div style="align-self: ">3</div>
+      <div style="">4</div>
+      <div style="">4</div>
+      <div style="">1</div>
+      <div style="">2</div>
+      <div style="">3</div>
+      <div style="">4</div>
+      <div style="">4</div>
+      <div style="">1</div>
+      <div style="">2</div>
+      <div style="">3</div>
+      <div style="">4</div>
+    </div> -->
     <!-- <div class="gallery">
       <div class="row">
         <div class="column">
