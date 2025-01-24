@@ -149,15 +149,62 @@
    /* #goto {
     background-color: blue;
    } */
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      nav, article {
+        padding: 20px;
+      }
+
+      h3 {
+        margin-top: 10px;
+      }
+
+      p {
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+
 
 
     </style>
     
   </head>
-  <body>
-    <a href="www.google.com">
+  <body style="font-family: sans-serif;">
+
+    <header style="text-align: center; background-color: grey; color: white; padding: 40px 0;">
+      <h1>Cities
+    </header>
+
+    <main > 
+      <nav style="width: 30%; float: left;">
+        <a href="#">London</a>
+        <a href="#">Paris</a>
+        <a href="#">Tokyo</a>
+      </nav>
+      <article style="width: 70%; float: left;">
+        <h3>London</h3>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+      </article>
+    </main>
+    <footer style="text-align: center; background-color: grey; color: white; padding: 40px 0; ">
+      <h3>Footer</h3>
+    </footer>
+
+
+    <!-- <a href="www.google.com">
     <img src="/assets/logan-weaver-lgnwvr-ony2Qt9lP38-unsplash.jpg" alt="long tree in snow" width=400 />
-  </a>
+  </a> -->
 
     <!-- <img src="https://images.unsplash.com/photo-1736297150541-89378f055b96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt="buildings of new york" />
 
