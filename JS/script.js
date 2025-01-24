@@ -1,3 +1,17 @@
+console.log(document.cookie)
+console.log(document.baseURI)
+console.log(document.body);
+console.log(document.doctype)
+console.log(document.documentElement)
+console.log(document.domain)
+console.log(document.embeds)
+
+
+
+
+
+
+
 // function myFunction() {
 //   let promise = new Promise((myResolve, myReject) => {
 //     setTimeout(() => {
