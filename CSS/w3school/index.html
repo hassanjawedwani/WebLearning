@@ -106,7 +106,7 @@
       line-height: 75px;
      }
      */
-      .container {
+      /* .container {
         display: flex;
         font-size: 40px;
         flex-wrap: wrap;
@@ -128,14 +128,46 @@
         .container div:last-child {
           flex: 100%;
         }
+      } */
+
+      .myGrid {
+        display: grid;
+        font-size: 2rem;
+        grid-template-columns: repeat(12, calc(100% / 12));
+        text-align: center;
       }
+
+      .myGrid div:nth-child(even) {
+        background-color: blue;
+      }
+
+      .myGrid div:nth-child(odd) {
+        background-color: yellow;
+      }
+
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="myGrid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+
+    <!-- <div class="container">
       <div style="">1</div>
       <div style="">2</div>
-    </div>
+    </div> -->
 
     <!-- <div class="container">
       <div style="align-self: flex-start;">1</div>
