@@ -1,10 +1,45 @@
-console.log(document.cookie)
-console.log(document.baseURI)
-console.log(document.body);
-console.log(document.doctype)
-console.log(document.documentElement)
-console.log(document.domain)
-console.log(document.embeds)
+// console.log(document.cookie)
+// console.log(document.baseURI)
+// console.log(document.body);
+// console.log(document.doctype)
+// console.log(document.documentElement)
+// console.log(document.domain)
+// console.log(document.embeds)
+// console.log(document.documentMode);
+// console.log(document.documentURI)
+// console.log(document.images);
+// console.log(document.implementation);
+// console.log(document.inputEncoding);
+// console.log(document.lastModified);
+// console.log(document.links);
+// console.log(document.readyState);
+// console.log(document.referrer);
+// console.log(Document.scripts);
+// console.log(document.strictErrorChecking);
+// console.log(document.title);
+// console.log(document.URL);
+
+
+// console.log(document.getElementById("temp"));
+// console.log(document.getElementById("memp"));
+
+// console.log(document.getElementsByTagName("p"));
+// console.log(document.getElementsByClassName("para"));
+// console.log(document.querySelectorAll("p"));
+// const form = document.forms['myForm'];
+// for (const element of form) {
+//   console.log(element);
+// }
+
+// console.log(document.documentElement)
+// console.log(document.head)
+// console.log(document.title)
+// console.log(document.body)
+// console.log(document.anchors)
+// console.log(document.forms)
+// console.log(document.images)
+// console.log(document.scripts)
+// console.log(document.embeds)
 
 
 
