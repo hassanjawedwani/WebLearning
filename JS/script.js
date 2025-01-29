@@ -1,3 +1,30 @@
+document.getElementById("calculate").addEventListener("click", () => {
+  const x = document.getElementById("myNumber").value;
+  document.getElementById("output").textContent = x < 99 ? "Input OK" : "Not valid";
+})
+
+
+// function onSubmit(e) {
+//   e.preventDefault();
+//   const inputValue = document.forms["myForm"]["myInput"].value;
+//   console.log(inputValue);
+// }
+
+
+// document.forms["myForm"].addEventListener("submit", onSubmit);
+
+
+
+
+// document.getElementById("myImage").src = "https://images.unsplash.com/photo-1656489782764-443559c29211?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8";
+
+// setInterval(() => {
+//   document.getElementById("time").innerHTML = "Data: " + Date();
+  
+// }, 1000);
+
+// document.getElementById("time").innerHTML.write(Date());
+
 // console.log(document.cookie)
 // console.log(document.baseURI)
 // console.log(document.body);
