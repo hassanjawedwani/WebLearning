@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Posts</title>
+  </head>
+  <body>
+    <h1>Registered Users </h1>
+    <% users.forEach(user => { %>
+    <div style="background-color: gray; margin-bottom: 1rem">
+      <h2>@<%=user.username%> &nbsp; &nbsp;<%=user.password%></h2>
+      <a href="http://localhost:8080/users/<%=user.username%>/edit" style="border: 2px solid black; text-decoration: none; padding: 0.3rem; color: white; font-weight: bold; background-color: purple;">Edit Post</a>
+      <br />
+      <form method="post" action="http://localhost:8080/users/<%=user.username%>?_method=DELETE">
+      <button style="border: 2px solid black; text-decoration: none; padding: 0.3rem; color: white; font-weight: bold; background-color: red;" type="submit">Delete</button>
+      </form>
+    </div>
+    <% }) %>
+    <hr />
+    <a href="http://localhost:8080/users/new" style="border: 2px solid black; text-decoration: none; padding: 0.3rem; color: white; font-weight: bold; background-color: purple;">Create New Post</a>
+  </body>
+</html>
