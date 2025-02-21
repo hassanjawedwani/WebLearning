@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+</head>
+<body>
+  <% for (user of result) { %>
+    <div style="background-color: gray; margin-bottom: 1rem;">
+      <p>ID: <%=user.id%></p>
+      <p>USERNAME: <%=user.username%></p>
+      <p>EMAIL: <%=user.email%></p>
+      <p>PASSWORD: <%=user.password%></p>
+      <a href="http://localhost:3000/<%=user.id%>/edit">EDIT</a>
+    </div>
+  <% } %>
+</body>
+</html>
