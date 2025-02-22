@@ -6,6 +6,18 @@
   <title>Edit</title>
 </head>
 <body>
-  <h1>Edit me</h1>
+  <h1>Edit </h1>
+  <p>Id : <%= user.id %></p>
+  <p>EMAIL: <%= user.email %></p>
+  <form method="post" action="http://localhost:3000/<%=user.id%>/edit">
+    <label>
+      USERNAME: <input type="text" value="<%=user.username%>"  
+      name="username"
+      placeholder="Enter updated username" />
+    </label>
+    <button type="submit">Update Username</button>
+  </form>
+
+
 </body>
 </html>

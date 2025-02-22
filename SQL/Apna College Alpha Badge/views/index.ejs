@@ -6,13 +6,17 @@
   <title>All Users</title>
 </head>
 <body>
+  <a style="background-color: rgb(0, 124, 0); padding: 5px; border: 2px solid purple;" href="http://localhost:3000/new">ADD USER</a>
   <% for (user of result) { %>
     <div style="background-color: gray; margin-bottom: 1rem;">
       <p>ID: <%=user.id%></p>
       <p>USERNAME: <%=user.username%></p>
       <p>EMAIL: <%=user.email%></p>
       <p>PASSWORD: <%=user.password%></p>
-      <a href="http://localhost:3000/<%=user.id%>/edit">EDIT</a>
+      <a href="http://localhost:3000/<%=user.id%>/security">EDIT</a>
+      <form method="post" action="http://localhost:3000/<%=user.id%>?_method=DELETE">
+        <button type="submit">Delete User</button>
+      </form>
     </div>
   <% } %>
 </body>

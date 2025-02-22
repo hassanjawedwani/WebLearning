@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>confirm it is you</title>
+  </head>
+  <body>
+    <form>
+      <h1>Please Enter Your Password</h1>
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        id="password"
+      />
+      <button type="submit">Check</button>
+    </form>
+
+    <script>
+      const user = {
+        id: "<%=user.id%>",
+        password: "<%=user.password%>",
+      };
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const password = e.target.password.value;
+        console.log(password)
+        if (password === user.password) {
+          window.location.href = `http://localhost:3000/${user.id}/edit`;
+          console.log("fuck pass");
+        }
+      })   
+    </script>
+  </body>
+</html>
