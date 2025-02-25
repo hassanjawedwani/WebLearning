@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Chats</h1>
+    <form method="get" action="http://localhost:8080/chats/new">
+      <button type="submit">Create a New Chat</button>
+    </form>
+    <% for(const chat of chats) { %>
+    <div class="chat">
+      <p>From: <%=chat.from%></p>
+      <p>To: <%=chat.to%></p>
+      <p style="font-weight: bold">Message: <%=chat.message%></p>
+      <p style="text-align: right;">
+        <%=chat.created_at.toString().split(" ")[4]%><br />
+        <%=chat.created_at.toString().split(" ").slice(0, 4).join(" ")%>
+      </p>
+      <form method="get" action="http://localhost:8080/chats/<%=chat._id%>/edit">
+        <button type="submit">Edit</button>
+      </form>
+      <form method="post" action="http://localhost:8080/chats/<%=chat._id%>?_method=DELETE">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+    <% } %>
+  </body>
+</html>

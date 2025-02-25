@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit chat</title>
+  </head>
+  <body>
+    <form method="post" action="http://localhost:8080/chats/<%=chat._id%>?_method=PUT">
+      <label>
+        Sender:
+        <input type="text" name="from" value="<%=chat.from%>" required />
+      </label><br /><br />
+      <label>
+        Reciever:
+        <input type="text" name="to" value="<%=chat.to%>" required/>
+      </label><br /><br />
+      <label>
+        Message:
+        <textarea name="message" ><%=chat.message%></textarea>
+
+      </label><br /><br />
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
