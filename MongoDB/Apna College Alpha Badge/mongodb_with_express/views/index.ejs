@@ -23,6 +23,9 @@
       <form method="get" action="http://localhost:8080/chats/<%=chat._id%>/edit">
         <button type="submit">Edit</button>
       </form>
+      <form method="get" action="http://localhost:8080/chats/<%=chat._id%>">
+        <button type="submit">Show</button>
+      </form>
       <form method="post" action="http://localhost:8080/chats/<%=chat._id%>?_method=DELETE">
         <button type="submit">Delete</button>
       </form>
