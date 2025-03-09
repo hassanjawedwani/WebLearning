@@ -56,7 +56,7 @@ const addData = async () => {
 }
 
 addData();
-
+ 
 app.listen(port, (req, res) => {
   console.log(`App is listening at port ${port}`);
 });

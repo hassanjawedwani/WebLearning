@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
-const Customer = require("./models/customer");
+const {Customer, customerSchema} = require("./models/customer");
 const app = express();
 
 const main = async () => {
@@ -15,12 +15,18 @@ main()
     console.log("Database Connection Error");
   });
 
-app.get("/", async(req, res) => {
-  const customers = await Customer.find({}).populate("orders");
-  console.log(customers[0]);
-  console.log(customers[1]);
-  console.log(customers[2]);
-});
+
+async function deletePost() {
+  const deletedCustomer = await Customer.findByIdAndDelete('67cbff72e92c1afb2c7e0ebb');
+  console.log(deletedCustomer);
+}
+
+deletePost();
+
+// app.get("/", async(req, res) => {
+//   const customers = await Customer.find({});
+//   console.log(customers);
+// });
 
 app.listen(8080, () => {
   console.log("Server is listening at port : 8080");

@@ -11,7 +11,17 @@ const customerSchema = new mongoose.Schema({
   ],
 });
 
-const Customer = mongoose.model("Customer", customerSchema);
+// Mongoose Middleware
+// customerSchema.pre("find",function() {
+//   console.log("pre middleware");
+// });
+
+customerSchema.post("findOneAndDelete", function (data) {
+  console.log("post schema", data);
+});
+
+
+const Customer = mongoose.model("Cu stomer", customerSchema);
 
 // const addCustomers = async () => {
 //   const customer1 = new Customer({
@@ -27,4 +37,7 @@ const Customer = mongoose.model("Customer", customerSchema);
 
 // addCustomers();
 
-module.exports = Customer;
+module.exports = {
+  Customer,
+  customerSchema
+};
